@@ -9,9 +9,8 @@ jobs:
     steps:
       - name: Install chrome
         run: |
-          VERSION_STRING="116.0.5845.225"
-          wget "https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_${VERSION_STRING}_amd64.deb"
-          sudo dpkg -i "google-chrome-stable_${VERSION_STRING}_amd64.deb"
+          CHROME_VERSION="116.0.5845.225"
+          apt-get install -y google-chrome-stable=${CHROME_VERSION}
       - name: Check
         run: |
           echo "Installed chrome version ..."
