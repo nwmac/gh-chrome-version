@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: browser-actions/setup-chrome@v1
         with:
-          chrome-version: 116.0.5793.0
+          chrome-version: 116.0.5845.187
       - name: Check
         run: |
           echo "Installed chrome version ..."
