@@ -13,6 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-        echo "Installed chrome version"
-        google-chrome --version
+          echo "Installed chrome version"
+          google-chrome --version
 
