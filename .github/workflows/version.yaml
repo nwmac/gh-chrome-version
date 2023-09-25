@@ -12,7 +12,11 @@ jobs:
   e2e-test:
     runs-on: ubuntu-latest
     steps:
-      - run: |
+      - name: Check
+        run: |
           echo "Installed chrome version ..."
           google-chrome --version
-
+      - name: Two
+        run: |
+          echo "Hi"
+          
