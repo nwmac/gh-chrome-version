@@ -9,8 +9,12 @@ jobs:
     steps:
       - name: Install chrome
         run: |
-          sudo apt-get update
-          sudo apt-get install -y google-chrome-stable=116.0.5845.187-1
+          google-chrome --version
+          sudo apt-get install -y wget unzip
+          wget https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/119.0.6028.0/linux64/chrome-linux64.zip
+          unzip chrome-linux64.zip
+          sudo ln -s $PWD/chrome-linux64/chrome /usr/bin/google-chrome
+          google-chrome --version
       - name: Check
         run: |
           echo "Installed chrome version ..."
