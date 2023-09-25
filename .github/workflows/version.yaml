@@ -7,9 +7,11 @@ jobs:
   e2e-test:
     runs-on: ubuntu-latest
     steps:
-      - uses: browser-actions/setup-chrome@v1
-        with:
-          chrome-version: 116.0.5845.225
+      - name: Install chrome
+        run: |
+          VERSION_STRING="116.0.5845.225"
+          wget "https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_${VERSION_STRING}_amd64.deb"
+          sudo dpkg -i "google-chrome-stable_${VERSION_STRING}_amd64.deb"
       - name: Check
         run: |
           echo "Installed chrome version ..."
