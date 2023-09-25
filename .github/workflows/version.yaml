@@ -10,7 +10,7 @@ jobs:
       - name: Install chrome
         run: |
           CHROME_VERSION="116.0.5845.225"
-          apt-get install -y google-chrome-stable=${CHROME_VERSION}
+          sudo apt-get install -y google-chrome-stable=${CHROME_VERSION}
       - name: Check
         run: |
           echo "Installed chrome version ..."
