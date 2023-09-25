@@ -8,8 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: browser-actions/setup-chrome@v1
-          with:
-            chrome-version: 116
+        with:
+          chrome-version: 116
       - name: Check
         run: |
           echo "Installed chrome version ..."
